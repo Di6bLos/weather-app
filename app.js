@@ -17,8 +17,10 @@ app.get("/", (req, res)=>{
 
 app.post("/", (req, res)=>{
     const cityName = req.body.cityInput;
+    const currentTempGauge = req.body.currentTemp;
    // const tempUnit = req.body.tempUnit;
     const apiUrl = urlPrefix + cityName + apiKey;
+    console.log(currentTempGauge);
     
     https.get(apiUrl, (response)=>{
         console.log("statusCode:", response.statusCode);
@@ -32,6 +34,16 @@ app.post("/", (req, res)=>{
             const iconCode = weatherApp.weather[0].icon;
             const weatherIcon = `<img src="http://openweathermap.org/img/wn/${iconCode}@2x.png">`;
 
+            const weatherData = {
+                currentTemp,
+                lowTemp,
+                highTemp,
+                weatherDis,
+                weatherIcon
+            };
+
+            
+            
         });
 
        
