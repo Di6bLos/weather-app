@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const config = require("dotenv").config();
+
+const port = process.env.PORT;
+const apiKey = process.env.API_KEY;
 
 app.use(express.static(__dirname + '/public'));
 
