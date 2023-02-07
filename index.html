@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
     <title>Weather App</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <div class="container">
+      <div class="img-box">
+        <img src="#" alt="current-weather-image" />
+      </div>
+      <div class="temp-display">
+        <div class="temp-gauge low-temp-gauge">
+            <input id="lowTemp" type="number" value="35" readonly>
+            <label for="lowTemp">Low:</label>
+        </div>
+        <div class="temp-gauge current-temp-gauge">
+            <input id="currentTemp" type="number" value="44" readonly>
+            <label for="currentTemp">Current:</label>
+        </div>
+        <div class="temp-gauge high-temp-gauge">
+            <input id="highTemp" type="number" value="48" readonly>
+            <label for="highTemp">High:</label>
+        </div>
+      </div>
+      <form action="/" method="post">
+        <div>
+            <label for="cityInput">City:</label>
+            <input id="cityInput" type="text"> 
+        </div>
+        <div>
+            <input type="radio" name="temp-unit" id="unitFar">
+            <label for="unitFar">F</label>
+        </div>
+        <div>
+            <input type="radio" name="temp-unit" id="unitCel">
+            <label for="unitCel">C</label>
+        </div>        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
 </html>
