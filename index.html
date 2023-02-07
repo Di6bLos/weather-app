@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="public/css/style.css" />
+    <!-- <link rel="stylesheet" href="public/css/style.css" /> -->
     <title>Weather App</title>
   </head>
   <body>
@@ -31,16 +31,16 @@
       <form action="/" method="post">
         <div>
             <label for="cityInput">City:</label>
-            <input id="cityInput" type="text"> 
+            <input id="cityInput" name="cityInput" type="text"> 
         </div>
-        <div>
-            <input type="radio" name="temp-unit" id="unitFar">
+        <!-- <div>
+            <input type="radio" name="tempUnit" id="unitFar" value="F">
             <label for="unitFar">F</label>
         </div>
         <div>
-            <input type="radio" name="temp-unit" id="unitCel">
+            <input type="radio" name="tempUnit" id="unitCel" value="C">
             <label for="unitCel">C</label>
-        </div>        
+        </div>         -->
         <button type="submit">Submit</button>
       </form>
     </div>
